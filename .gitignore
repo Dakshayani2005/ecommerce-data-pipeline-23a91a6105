@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+
+# Logs
+logs/
+*.log
+
+# Data files
+data/raw/*.csv
+data/staging/*.csv
+data/processed/*.csv
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Docker
+*.pid
