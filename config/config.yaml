@@ -1,10 +1,48 @@
+# ===============================
+# Database Configuration
+# ===============================
 database:
-  host: ${DB_HOST}
-  port: ${DB_PORT}
-  name: ${DB_NAME}
-  user: ${DB_USER}
-  password: ${DB_PASSWORD}
+  database:
+  host: localhost
+  port: 5432
+  name: ecommerce_db
+  user: postgres
+  password: postgres
 
+
+# ===============================
+# Data Generation Parameters
+# ===============================
+data_generation:
+  customers_count: 1000
+  products_count: 500
+  transactions_count: 10000
+  transaction_items_min: 15000
+  transaction_items_max: 25000
+  start_date: "2023-01-01"
+  end_date: "2024-01-01"
+  distribution: realistic
+
+# ===============================
+# Pipeline Configuration
+# ===============================
 pipeline:
   batch_size: 1000
+  max_retries: 3
+  timeout_seconds: 30
   log_level: INFO
+
+# ===============================
+# BI Tool Configuration
+# ===============================
+bi_tool:
+  tool: powerbi     # tableau or powerbi
+  host: localhost
+  port: 5432
+
+scheduler:
+  run_time: "10:47"     # daily run time (24-hour format, local time)
+  timezone: "local"
+
+cleanup:
+  retention_days: 7

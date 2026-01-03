@@ -1,0 +1,9 @@
+[run]
+source = scripts
+
+[report]
+omit =
+    scripts/pipeline_orchestrator.py
+    scripts/scheduler.py
+    scripts/cleanup_old_data.py
+    scripts/data_quality_checks.py
